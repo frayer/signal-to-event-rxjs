@@ -17,11 +17,16 @@
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run check"
+    "posttest": "npm run check",
+    "exec": "npm run compile && node build/src/"
   },
   "devDependencies": {
     "gts": "^2.0.2",
     "typescript": "^3.8.3",
     "@types/node": "^13.11.1"
+  },
+  "dependencies": {
+    "gps-distance": "0.0.4",
+    "rxjs": "^6.6.3"
   }
 }
