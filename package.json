@@ -26,6 +26,7 @@
     "@types/node": "^13.11.1"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "gps-distance": "0.0.4",
     "rxjs": "^6.6.3"
   }

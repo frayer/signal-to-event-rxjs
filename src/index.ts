@@ -1,5 +1,6 @@
 import { filter, map, reduce, scan, tap, withLatestFrom } from "rxjs/operators";
 import { determineSpeedLimitAccumulator, mphAccumulator, speedLimitsDiffer, timedGPSSignals } from "./helpers";
+import * as colors from "colors/safe";
 
 const vehicleACoordinates = [
   [40.02574645774399,  -83.03642720881868],
@@ -38,6 +39,6 @@ const speedingCarEventStream = vehicleSpeedEventStream.pipe(
   filter(speedAndLimit => speedAndLimit.mph > speedAndLimit.speedLimit)
 );
 
-vehicleSpeedEventStream.subscribe(e => console.log(`Vehicle is traveling ${e.speed} MPH`));
-speedLimitEventStream.subscribe(e => console.log(`Vehicle is in a ${e.currentSpeedLimit} MPH Speed Zone`));
-speedingCarEventStream.subscribe(e => console.log(`SPEEDING ALERT: Vehicle is traveling ${e.mph} MPH in a ${e.speedLimit} MPH Zone`));
+vehicleSpeedEventStream.subscribe(e => console.log(`${colors.green( "SPEED EVENT:")}      Vehicle is traveling ${e.speed} MPH`));
+speedLimitEventStream.subscribe(e =>   console.log(`${colors.yellow("SPEED ZONE EVENT:")} Vehicle is in a ${e.currentSpeedLimit} MPH Speed Zone`));
+speedingCarEventStream.subscribe(e =>  console.log(`${colors.red(   "SPEEDING EVENT:")}   Vehicle is traveling ${e.mph} MPH in a ${e.speedLimit} MPH Zone`));
