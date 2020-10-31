@@ -3,6 +3,7 @@ import { determineSpeedLimitAccumulator, mphAccumulator, speedLimitsDiffer, time
 import * as colors from "colors/safe";
 
 // Comment to test pipeline execution
+// Another comment
 
 const vehicleACoordinates = [
   [40.02574645774399,  -83.03642720881868],
