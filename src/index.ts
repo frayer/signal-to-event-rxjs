@@ -2,6 +2,8 @@ import { filter, map, reduce, scan, tap, withLatestFrom } from "rxjs/operators";
 import { determineSpeedLimitAccumulator, mphAccumulator, speedLimitsDiffer, timedGPSSignals } from "./helpers";
 import * as colors from "colors/safe";
 
+// Trigger test
+
 const vehicleACoordinates = [
   [40.02574645774399,  -83.03642720881868],
   [40.025069432202606, -83.03637926433254],
