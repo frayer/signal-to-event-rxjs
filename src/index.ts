@@ -4,6 +4,7 @@ import * as colors from "colors/safe";
 
 // Trigger test
 // Next trigger test
+// Third trigger test
 
 const vehicleACoordinates = [
   [40.02574645774399,  -83.03642720881868],
